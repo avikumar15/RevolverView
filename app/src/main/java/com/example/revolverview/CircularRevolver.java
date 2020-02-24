@@ -37,7 +37,7 @@ public class CircularRevolver extends View {
         mainCircleX=x;
         mainCircleY=y;
         mainCircleRad=r;
-        smallCircleRad=r/6;
+        smallCircleRad=r/4;
         circlePaddingTop=r/6;
         angleFromTop=0;
         noOfItems=5;
@@ -120,9 +120,9 @@ public class CircularRevolver extends View {
                     System.out.println("currentX - " + currentX + " currentY - " + currentY);
 
                     if (currentX - x >= 0 && currentY - y >= 0 || currentX - x <= 0 && currentY - y <= 0) {
-                        angleFromTop += 0.2f;
+                        angleFromTop += 0.1f;
                     } else
-                        angleFromTop -= 0.2f;
+                        angleFromTop -= 0.1;
                     postInvalidate();
                     break;
 
